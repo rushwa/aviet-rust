@@ -1,0 +1,208 @@
+/* ============================================
+   AVIET THEME SYSTEM - Pink/Purple Gradient
+   ============================================ */
+
+/* ============================================
+   CSS VARIABLES - Dark Mode (Default)
+   ============================================ */
+:root {
+    --gradient-start: #e02b68;
+    --gradient-mid: #c6567c;
+    --gradient-end: #3c1977;
+    --gradient-accent: #6c5ce7;
+
+    --bg-primary: #121a30;
+    --bg-secondary: #16213e;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --bg-input: rgba(255, 255, 255, 0.08);
+    --bg-hover: rgba(255, 255, 255, 0.1);
+
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --text-accent: #ff6b9d;
+
+    --border-color: rgb(77, 196, 69);
+    --border-focus: #e02b68;
+
+    --success: #00d4aa;
+    --error: #ff6b6b;
+    --warning: #ffd93d;
+
+    --shadow-glow: 0 0 20px rgba(255, 107, 157, 0.3);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   LIGHT MODE
+   ============================================ */
+[data-theme="light"] {
+    --bg-primary: #faf8ff;
+    --bg-secondary: #f0ebf8;
+    --bg-card: rgb(18, 26, 48);
+    --bg-input: rgba(0, 0, 0, 0.05);
+    --bg-hover: rgba(0, 0, 0, 0.08);
+
+    --text-primary: #2d3436;
+    --text-secondary: rgba(45, 52, 54, 0.7);
+    --text-muted: rgba(45, 52, 54, 0.5);
+    --text-accent: #c44569;
+
+    --border-color: rgb(107, 68, 173);
+    --border-focus: #8e44ad;
+
+    --shadow-glow: 0 0 20px rgba(142, 68, 173, 0.2);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+window {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+}
+
+/* ============================================
+   GRADIENT ACCENTS
+   ============================================ */
+.title-1 {
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title-5 {
+    font-size: 11px;
+    font-weight: 700;
+    background: linear-gradient(125deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+button.suggested-action {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+button.suggested-action:hover {
+    box-shadow: 0 6px 25px rgba(255, 107, 157, 0.5);
+    transform: translateY(-2px);
+}
+.heading {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gradient-start);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+button {
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button.suggested-action {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+}
+
+button.suggested-action:hover {
+    box-shadow: 0 6px 25px rgba(255, 107, 157, 0.5);
+}
+
+button.destructive-action {
+    background: linear-gradient(135deg, #ff6b6b 0%, #c6567c 100%);
+    color: white;
+}
+
+.theme-toggle {
+    background: var(--bg-card);
+    border-radius: 50%;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
+    border: 2px solid var(--border-color);
+}
+
+.theme-toggle:hover {
+    border-color: var(--gradient-start);
+    box-shadow: var(--shadow-glow);
+}
+
+/* ============================================
+   ENTRIES
+   ============================================ */
+entry {
+    background: var(--bg-input);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    padding: 14px 18px;
+}
+
+entry:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.2);
+}
+
+/* ============================================
+   NETWORK STATUS
+   ============================================ */
+.success { color: var(--success); }
+.error { color: var(--error); }
+
+/* ============================================
+   PROGRESS BAR
+   ============================================ */
+progressbar progress {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    border-radius: 8px;
+}
+
+/* ============================================
+   SEPARATOR
+   ============================================ */
+separator {
+    background: linear-gradient(90deg, transparent, var(--gradient-mid), transparent);
+    min-height: 2px;
+}
+
+/* ============================================
+   FRAME
+   ============================================ */
+frame {
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.logo{
+    background: #1c519f;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 106px;
+    border: 7px solid var(--border-color);
+    margin: 8px;
+    padding-left: 10px;
+
+}
+
+.logo-title {
+    font-size: 40px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom-left-radius: 86px;
+    /*margin-inline: 30px;*/
+    padding-right: 10px;
+}
